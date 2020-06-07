@@ -21,19 +21,39 @@ $numerito=13; //tipado dinamico
 
 // Ambito de la variable
 $color="rosa";
-$color= "verde";
+$color= "verde ";
 echo $color;
 
 //en PHP el ambito global  NO se puede usar en todas partes
 
- function scopeProve(){
-     echo $rosa;
+ function scopeProbe(){
+    global $color;
+     echo $color;
  }
+ 
+ scopeProbe();
 
-// constatnte inicia con letra
+ // o establecer la propia variable en otro contexto
 
-const PATH1=1; //ni variables ni funciones
-//define (" ") // aqui si
+  function scopeProbe2(){
+    $color = "rosa ";
+    echo $color;
+  }
+
+  scopeProbe2();
+// Constantes : Se pueden declarar con const o con define
+// NO inician con signo de dolar con letra
+// Se escriben en puras mayusculas
+//Inician con letra o guion bajo
+
+//
+//Constantes con const
+const PATH1=" cursoPHP/index.php"; //ni variables ni funciones
+echo PATH1;
+
+//Constantes con define
+define("PATH2", " cursoPHP/index222.php");
+echo PATH2;
 
 
 
