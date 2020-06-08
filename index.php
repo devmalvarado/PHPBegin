@@ -134,7 +134,22 @@ $frase=<<<'FRASE'
 
 
 No se trata de cambiar de dueño si no de dejar de ser $animal \n
+
 FRASE;
 
 echo $frase;
+
+//Concatención e Interpolación
+// Unir o enlazar datos para formar una gran cadena
+// Se utiliza el . (punto)
+
+
+$word1='malva';
+$word2='Learn';
+
+echo 'Hola bienvenido a '.$word1 .$word2;
+
+echo "\nHola bienvenido a $word1$word2";
+echo "\nHola bienvenido a {$word1} Development {$word2}!";
+
 ?>
